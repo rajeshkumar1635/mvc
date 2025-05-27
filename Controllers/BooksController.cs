@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using mvc_app.Models;
 
 namespace books_mvc.Controllers
 {
@@ -7,8 +8,14 @@ namespace books_mvc.Controllers
         // GET: BooksController
         public ActionResult Index()
         {
-            return View();
-        }
+            var book = new Books();
+            return View("allbooks",book);
 
+        }
+        public ActionResult FavoriteBook()
+        {
+            var book = new Books();
+            return View(book);
+        }
     }
 }
