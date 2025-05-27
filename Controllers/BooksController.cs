@@ -6,10 +6,10 @@ namespace books_mvc.Controllers
     public class BooksController : Controller
     {
         // GET: BooksController
-        public ActionResult Index()
+        public ActionResult Collection()
         {
             var book = new Books();
-            return View("allbooks",book);
+            return View(book);
 
         }
         public ActionResult FavoriteBook()
